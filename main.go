@@ -3,5 +3,5 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println("Initial GO Code and commit")
+	fmt.Println("You're on MASTER - again...")
 }
