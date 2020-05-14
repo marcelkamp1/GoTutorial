@@ -3,15 +3,20 @@ package main
 import "fmt"
 
 func main() {
-	ints := []int{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+	ints := []int{}
+	dynamicRange := 100
 
-	for _, i := range ints {
-		if ints[i]%2 != 0 {
-			fmt.Printf("%v is odd \n", ints[i])
+	for i := 0; i <= dynamicRange; i++ {
+		ints = append(ints, i)
+	}
+
+	for _, n := range ints {
+		if ints[n]%2 != 0 {
+			fmt.Printf("%v is odd \n", ints[n])
 		}
 
-		if ints[i]%2 == 0 {
-			fmt.Printf("%v is even \n", ints[i])
+		if ints[n]%2 == 0 {
+			fmt.Printf("%v is even \n", ints[n])
 		}
 	}
 }
