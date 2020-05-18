@@ -15,24 +15,19 @@ type shape interface {
 }
 
 func main()  {
-	t := triangle{}
-	s := square{}
+	t := triangle{base: 10, height: 10}
+	s := square{sideLength: 10}
 
 	printArea(t)
 	printArea(s)
 }
 
-func (triangle) getArea() float64{
-	height := 4.0
-	base := 3.0
-	areaOfTriangle := 0.5 * base * height
-	return areaOfTriangle
+func (t triangle) getArea() float64{
+	return 0.5 * t.base * t.height
 }
 
-func (square) getArea() float64 {
-	sideLength := 2.0
-	result := sideLength * sideLength
-	return result
+func (s square) getArea() float64 {
+	return s.sideLength * s.sideLength
 }
 
 func printArea(s shape) {
