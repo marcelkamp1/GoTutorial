@@ -2,17 +2,19 @@ package main
 
 import (
 	"fmt"
-	"io/ioutil"
+	"io"
+	//"io/ioutil"
 	"os"
 )
 
 func main()  {
-	file, err := ioutil.ReadFile(os.Args[1])
+
+	file, err := os.Open(os.Args[1])
 	if err != nil {
-		fmt.Println("Cannot read the file")
+		fmt.Println("Error:", err)
 		os.Exit(1)
 	}
-	fmt.Println(string(file))
+	io.Copy(os.Stdout, file)
 }
 
 
