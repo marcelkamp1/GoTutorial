@@ -9,10 +9,10 @@ import (
 )
 
 func main() {
-	fmt.Println(is_valid_ip("192.168.0.1"))
+	fmt.Println(isValidIP("192.168.0.1"))
 }
 
-func is_valid_ip(ip string) bool {
+func isValidIP(ip string) bool {
 
 	splits := strings.Split(ip, ".")
 	newInts := []int{}
