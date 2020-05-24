@@ -3,16 +3,24 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println(nbYear(1500, 0.05, 100, 5000)) // expected 15
+	fmt.Println(nbYear(1500,5,100,5000))
+	fmt.Println(nbYear(1500000, 0.25, 1000, 2000000)) // expected 94
 }
 
 func nbYear(p0 int, percent float64, aug int, p int) int {
 	// your code
 
-	//TODO: research recursion in GO
+	years := 0
 
-	return -1
+	for {
+			p0 = int(float64(p0) + float64(p0)*percent/100 + float64(aug))
+			years++
+			if p0 >= p {
+				return years
+			}
+	}
 }
+
 
 /*
 In a small town the population is p0 = 1000 at the beginning of a year.
