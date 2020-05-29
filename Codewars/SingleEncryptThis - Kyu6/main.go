@@ -9,7 +9,7 @@ import (
 )
 
 func main() {
-	fmt.Println(encrypt("Hello"))
+	fmt.Println(encrypt("dich"))
 }
 
 func encrypt(s string) string {

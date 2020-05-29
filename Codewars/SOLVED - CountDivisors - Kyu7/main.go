@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println(divisors(7))
+	fmt.Println(divisors(30))
 }
 
 func divisors(n int) int {
